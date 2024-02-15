@@ -1,5 +1,6 @@
 import re
 
+
 def get_extension_id(raw: str) -> str:
     pattern = r'/+'
     return re.split(pattern, raw)[1]

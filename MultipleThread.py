@@ -15,15 +15,3 @@ class CustomThread(Thread):
     def join(self, *args) -> Any:
         Thread.join(self, *args)
         return self._return
-
-
-def add(n1, n2):
-    return n1 + n2
-
-
-if __name__ == '__main__':
-    thread = CustomThread(target=add, args=(5, 3,))
-    thread.start()
-    id = thread.join()
-    print(id)
-    print(thread.join())
